@@ -1,0 +1,24 @@
+//1.  Query all columns for all American cities in the CITY table with populations larger than 100000. The CountryCode for America is USA.
+//
+//The CITY table is described as follows:
+
+//CITY.jpg
+
+Select *
+From CITY
+Where (POPULATION > 100000
+    AND COUNTRYCODE = 'USA');
+
+
+2.  
+Query a list of CITY names from STATION for cities that have an even ID number. Print the results in any order, but exclude duplicates from the answer.
+The STATION table is described as follows:
+
+Station.jpg
+
+
+
+SELECT DISTINCT CITY
+FROM STATION
+WHERE mod(ID,2) = 0
+ORDER BY STATE ASC;
